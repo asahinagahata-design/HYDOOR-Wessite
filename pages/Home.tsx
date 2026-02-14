@@ -7,23 +7,15 @@ const Home: React.FC = () => {
     <div className="w-full bg-black">
       {/* Dynamic Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Video */}
+        {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
+          <img
+            src="https://images.pexels.com/photos/863988/pexels-photo-863988.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            alt="Swimming background"
             className="w-full h-full object-cover opacity-60 contrast-110 scale-100"
-            poster="https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format&fit=crop&q=80&w=2000"
-          >
-            <source 
-              src="https://player.vimeo.com/external/371433846.hd.mp4?s=231aab185a666870a49646c050639999&profile_id=175" 
-              type="video/mp4" 
-            />
-          </video>
+          />
           {/* Grain Overlay */}
-          <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-black/40 pointer-events-none"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20"></div>
         </div>
 
@@ -84,21 +76,21 @@ const Home: React.FC = () => {
                 title: 'PERFORMANCE GEAR',
                 label: 'TECHNOLOGY',
                 desc: 'アスリートのポテンシャルをミリ単位で最適化する、最高峰のOEMソリューション。',
-                img: 'https://images.unsplash.com/photo-1517130591467-f112e67bb3ad?auto=format&fit=crop&q=80&w=1200'
+                img: 'https://images.pexels.com/photos/116077/pexels-photo-116077.jpeg?auto=compress&cs=tinysrgb&w=1200'
               },
               {
                 id: '02',
                 title: 'AQUA THEATER',
                 label: 'ARTISTRY',
                 desc: 'アーティスティックスイミングをベースとした、水と光によるイマーシブ・エクスペリエンス。',
-                img: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=1200'
+                img: 'https://images.pexels.com/photos/1263349/pexels-photo-1263349.jpeg?auto=compress&cs=tinysrgb&w=1200'
               },
               {
                 id: '03',
                 title: 'SPACE DESIGN',
                 label: 'PRODUCTION',
                 desc: 'ブランドの本質を空間全体で体現する、クリエイティブ・プロダクション。',
-                img: 'https://images.unsplash.com/photo-1519750783826-e2420f4d687f?auto=format&fit=crop&q=80&w=1200'
+                img: 'https://images.pexels.com/photos/159376/construction-site-build-construction-work-159376.jpeg?auto=compress&cs=tinysrgb&w=1200'
               }
             ].map((item) => (
               <div key={item.id} className="group relative aspect-[4/5] overflow-hidden bg-neutral-900 border border-white/5">

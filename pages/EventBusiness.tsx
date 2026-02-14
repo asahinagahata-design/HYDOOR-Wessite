@@ -6,12 +6,14 @@ const EventBusiness: React.FC = () => {
     <div className="w-full bg-black">
       {/* Hero - Artistic Swimming */}
       <section className="relative h-[800px] flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center scale-100 opacity-80"
-          style={{ 
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=2000")` 
-          }}
-        />
+        <div className="absolute inset-0">
+          <img
+            src="https://images.pexels.com/photos/1263349/pexels-photo-1263349.jpeg?auto=compress&cs=tinysrgb&w=2000"
+            alt="Artistic Swimming"
+            className="w-full h-full object-cover scale-100 opacity-80"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/50"></div>
+        </div>
         <div className="relative z-10 text-center px-6">
           <span className="inline-block px-8 py-3 bg-primary/20 backdrop-blur-xl border border-primary/50 text-primary rounded-full text-xs font-black tracking-[0.5em] uppercase mb-10 shadow-2xl">
             SYNCHRONIZED ARTISTRY
@@ -32,10 +34,10 @@ const EventBusiness: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-24 items-center">
           <div className="relative group aspect-square md:aspect-auto md:h-[600px]">
             <div className="absolute -inset-10 bg-primary/10 blur-[120px] rounded-full group-hover:bg-primary/20 transition-all"></div>
-            <img 
-              src="https://images.unsplash.com/photo-1530549387074-d56223594191?auto=format&fit=crop&q=80&w=1200" 
-              className="relative rounded-[3rem] shadow-2xl transition-all duration-1000 bg-neutral-800 w-full h-full object-cover opacity-100" 
-              alt="Aqua performance" 
+            <img
+              src="https://images.pexels.com/photos/863988/pexels-photo-863988.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              className="relative rounded-[3rem] shadow-2xl transition-all duration-1000 bg-neutral-800 w-full h-full object-cover opacity-100"
+              alt="Aqua performance"
             />
           </div>
           <div className="space-y-10">

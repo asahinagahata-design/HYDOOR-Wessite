@@ -6,9 +6,10 @@ const SportsBusiness: React.FC = () => {
     <div className="w-full bg-black">
       {/* Hero - Cinematic Tech */}
       <section className="relative h-[90vh] flex items-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-70 grayscale-0 contrast-100 scale-100"
-          style={{ backgroundImage: `url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=2000")` }} 
+        <img
+          src="https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg?auto=compress&cs=tinysrgb&w=2000"
+          alt="Sports Technology"
+          className="absolute inset-0 w-full h-full object-cover opacity-70 grayscale-0 contrast-100 scale-100"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/20 to-transparent"></div>
         <div className="relative z-10 max-w-[1600px] mx-auto px-8 md:px-12 w-full">
@@ -55,9 +56,9 @@ const SportsBusiness: React.FC = () => {
             </div>
             <div className="sticky top-40">
               <div className="relative aspect-square w-full rounded-sm overflow-hidden shadow-2xl bg-neutral-900">
-                 <img 
-                    src="https://images.unsplash.com/photo-1530549387074-d56223594191?auto=format&fit=crop&q=80&w=1200" 
-                    className="w-full h-full object-cover grayscale-0 opacity-90 hover:opacity-100 transition-all duration-1000" 
+                 <img
+                    src="https://images.pexels.com/photos/2294361/pexels-photo-2294361.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                    className="w-full h-full object-cover grayscale-0 opacity-90 hover:opacity-100 transition-all duration-1000"
                     alt="Engineering Precision"
                   />
                   <div className="absolute top-10 right-10 text-right">
