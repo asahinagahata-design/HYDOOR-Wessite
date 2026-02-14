@@ -83,7 +83,7 @@ const Home: React.FC = () => {
                 title: 'AQUA THEATER',
                 label: 'ARTISTRY',
                 desc: 'アーティスティックスイミングをベースとした、水と光によるイマーシブ・エクスペリエンス。',
-                img: '/7936f93d-a562-41cb-857b-b53b1518aa4b.png'
+                img: 'https://images.pexels.com/photos/1263349/pexels-photo-1263349.jpeg?auto=compress&cs=tinysrgb&w=1200'
               },
               {
                 id: '03',
