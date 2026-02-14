@@ -65,7 +65,7 @@ const Home: React.FC = () => {
               <h2 className="text-6xl md:text-8xl font-display leading-[0.9] tracking-tight text-white">HYDOR FOR ALL ATHELETES.</h2>
             </div>
             <p className="text-gray-400 text-sm tracking-widest uppercase max-w-xs text-right hidden md:block">
-              We specialize in creating tools and experiences for those who demand excellence.
+              ヒュドールはアスリートの一番近くで最高のパフォーマンスが発揮できるようサポートします。
             </p>
           </div>
 
