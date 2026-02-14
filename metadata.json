@@ -1,0 +1,8 @@
+{
+  "name": "HYDOOR Inc. Corporate Portal",
+  "description": "A high-end, responsive corporate web application for HYDOOR Inc., featuring business divisions for Event Entertainment and Sports Equipment, a recruitment portal, and AI-powered concierge support.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
