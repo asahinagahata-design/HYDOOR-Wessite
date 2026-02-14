@@ -62,7 +62,7 @@ const Home: React.FC = () => {
           <div className="flex flex-col md:flex-row items-end justify-between mb-24 gap-8">
             <div className="max-w-2xl">
               <span className="text-primary font-display text-2xl tracking-widest mb-4 block italic">Our Domains</span>
-              <h2 className="text-6xl md:text-8xl font-display leading-[0.9] tracking-tight text-white">PRECISION<br/>& ARTISTRY</h2>
+              <h2 className="text-6xl md:text-8xl font-display leading-[0.9] tracking-tight text-white">HYDOR FOR ALL ATHELETES.</h2>
             </div>
             <p className="text-gray-400 text-sm tracking-widest uppercase max-w-xs text-right hidden md:block">
               We specialize in creating tools and experiences for those who demand excellence.
