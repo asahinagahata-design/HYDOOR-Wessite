@@ -10,7 +10,7 @@ const Home: React.FC = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.pexels.com/photos/1263349/pexels-photo-1263349.jpeg?auto=compress&cs=tinysrgb&w=1920"
+            src="/7936f93d-a562-41cb-857b-b53b1518aa4b.png"
             alt="Swimming background"
             className="w-full h-full object-cover opacity-60 contrast-110 scale-100"
           />
