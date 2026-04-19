@@ -8,7 +8,7 @@ const Home: React.FC = () => {
   return (
     <div className="w-full bg-black">
       {/* Dynamic Hero Section */}
-      <section className="relative h-screen flex items-end justify-center overflow-hidden pb-20 md:items-end md:pb-6">
+      <section className="relative h-screen flex items-end justify-center overflow-hidden pb-8 md:items-end md:pb-6">
         <div className="absolute inset-0 z-0">
           <video
             className="w-full h-full object-cover opacity-60 contrast-110 scale-100"
