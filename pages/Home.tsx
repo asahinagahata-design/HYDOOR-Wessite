@@ -39,7 +39,7 @@ const Home: React.FC = () => {
               Forging the Future of Performance
             </h2>
           </div>
-          <h1 className="mb-12 flex flex-col items-center font-display leading-[0.8] tracking-tighter text-white text-[clamp(3.5rem,13vw,5.25rem)] md:text-[9rem] lg:text-[12rem] xl:text-[14rem]">
+          <h1 className="mb-12 flex flex-col items-center font-display leading-[0.82] tracking-tighter text-white text-[clamp(4.75rem,17.5vw,7rem)] md:text-[9rem] lg:text-[12rem] xl:text-[14rem]">
             <span className="block animate-in slide-in-from-right duration-1000 delay-200">BEYOND THE</span>
             <span className="block text-primary text-glow animate-in slide-in-from-left duration-1000 delay-500">SURFACE</span>
           </h1>
@@ -71,21 +71,21 @@ const Home: React.FC = () => {
       </section>
 
       {/* Expertise Section - High Contrast Grid */}
-      <section id="services" className="relative bg-black py-24 md:py-40">
-        <div className="mx-auto max-w-[1800px] px-5 sm:px-8 md:px-12">
-          <div className="mb-24 flex flex-col gap-6 text-left md:gap-8">
+      <section id="services" className="relative bg-black py-12 md:py-40">
+        <div className="mx-auto max-w-[1800px] px-3 sm:px-8 md:px-12">
+          <div className="mb-8 flex flex-col gap-3 text-left md:mb-24 md:gap-8">
             <div className="max-w-4xl">
-              <span className="mb-4 block font-display text-2xl italic tracking-widest text-primary">Our Domains</span>
-              <h2 className="font-display text-5xl leading-[0.9] tracking-tight text-white sm:text-6xl md:text-8xl">
+              <span className="mb-2 block font-display text-base italic tracking-widest text-primary md:mb-4 md:text-2xl">Our Domains</span>
+              <h2 className="font-display text-3xl leading-[0.9] tracking-tight text-white sm:text-5xl md:text-8xl">
                 HYDOOR FOR ALL ATHLETES.
               </h2>
             </div>
-            <p className="max-w-2xl text-left text-sm leading-relaxed tracking-wide text-gray-400">
+            <p className="max-w-2xl text-left text-xs leading-relaxed tracking-wide text-gray-400 md:text-sm">
               ヒュドールはアスリートの一番近くで最高のパフォーマンスが発揮できるようサポートします。
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-1 md:grid-cols-3">
+          <div className="grid grid-cols-3 gap-0.5 md:gap-1">
             {[
               {
                 id: '01',
@@ -136,36 +136,34 @@ const Home: React.FC = () => {
                 link: '/ai-system',
               },
             ].map((item) => (
-              <div
+              <Link
                 key={item.id}
-                className="group relative aspect-[4/5] min-h-[220px] min-w-0 overflow-hidden border border-white/5 bg-neutral-900 md:aspect-[3/4] md:min-h-0"
+                to={item.link}
+                className="group relative block aspect-[3/4] min-w-0 overflow-hidden border border-white/5 bg-neutral-900"
               >
                 <img
                   src={item.img}
                   className="absolute inset-0 h-full w-full scale-100 object-cover opacity-70 transition-all duration-1000 group-hover:scale-110 group-hover:opacity-100"
                   alt={item.title}
                 />
-                <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black via-black/10 to-transparent p-5 sm:p-6 md:p-5 lg:p-8">
-                  <span className="mb-2 font-display text-xl text-primary drop-shadow-lg md:text-lg lg:text-2xl">{item.id}</span>
-                  <p className="mb-1 text-[10px] font-black tracking-[0.35em] text-primary drop-shadow-md md:text-[9px] md:tracking-[0.3em] lg:text-xs lg:tracking-[0.4em]">
+                <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black via-black/30 to-transparent p-2 sm:p-4 md:p-5 lg:p-8">
+                  <span className="mb-0.5 font-display text-[10px] text-primary drop-shadow-lg sm:text-base md:text-lg lg:text-2xl">{item.id}</span>
+                  <p className="mb-0.5 hidden text-[8px] font-black tracking-[0.25em] text-primary drop-shadow-md sm:block md:text-[9px] md:tracking-[0.3em] lg:text-xs lg:tracking-[0.4em]">
                     {item.label}
                   </p>
-                  <h3 className="mb-2 font-display text-2xl leading-none tracking-tight text-white drop-shadow-2xl md:text-xl lg:text-3xl xl:text-4xl">
+                  <h3 className="font-display text-[10px] leading-tight tracking-tight text-white drop-shadow-2xl sm:text-base md:text-xl lg:text-3xl xl:text-4xl">
                     {item.title}
                   </h3>
-                  <div className="max-h-0 overflow-hidden transition-all duration-700 group-hover:max-h-40">
-                    <p className="mb-4 text-[11px] leading-relaxed tracking-wider text-gray-200 drop-shadow-lg sm:text-xs sm:tracking-widest">
+                  <div className="hidden max-h-0 overflow-hidden transition-all duration-700 group-hover:max-h-40 md:block">
+                    <p className="mb-4 mt-2 text-[11px] leading-relaxed tracking-wider text-gray-200 drop-shadow-lg sm:text-xs sm:tracking-widest">
                       {item.desc}
                     </p>
-                    <Link
-                      to={item.link}
-                      className="inline-block border-b border-primary pb-1 text-[9px] font-black uppercase tracking-widest text-white transition-colors hover:text-primary"
-                    >
+                    <span className="inline-block border-b border-primary pb-1 text-[9px] font-black uppercase tracking-widest text-white transition-colors group-hover:text-primary">
                       Learn More
-                    </Link>
+                    </span>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

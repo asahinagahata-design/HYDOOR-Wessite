@@ -61,7 +61,7 @@ const SportsBusiness: React.FC = () => {
   return (
     <div className="w-full bg-black">
       {/* HERO */}
-      <section className="relative flex min-h-[85vh] items-center overflow-hidden">
+      <section className="relative flex min-h-[60vh] items-center overflow-hidden md:min-h-[85vh]">
         <img
           src="/images/performance-gear.png?v=20260419"
           alt="スポーツアパレル・パフォーマンスギア"
@@ -70,19 +70,18 @@ const SportsBusiness: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/55 to-black/10" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
 
-        <div className="relative z-10 mx-auto w-full max-w-[1600px] px-8 md:px-12">
+        <div className="relative z-10 mx-auto w-full max-w-[1600px] px-5 md:px-12">
           <div className="max-w-4xl">
-            <span className="mb-6 block font-display text-xl italic tracking-[0.3em] text-primary">
+            <span className="mb-3 block font-display text-xs italic tracking-[0.3em] text-primary md:mb-6 md:text-xl">
               01 — HYDOOR SPORTS
             </span>
-            <h1 className="mb-10 font-display text-6xl leading-[0.85] tracking-tighter text-white md:text-[10rem]">
+            <h1 className="mb-4 font-display text-5xl leading-[0.85] tracking-tighter text-white md:mb-10 md:text-[10rem]">
               PERFORMANCE
               <br />
               <span className="text-primary">GEAR</span>
             </h1>
-            <p className="max-w-2xl text-lg leading-relaxed tracking-widest text-gray-200 md:text-xl">
+            <p className="max-w-2xl text-xs leading-relaxed tracking-wider text-gray-200 md:text-xl md:tracking-widest">
               競技に取り組むすべての方へ、スポーツアパレルとギアをお届けします。
-              <br className="hidden md:block" />
               豊富なラインナップの中から、用途に合った商品を、お求めやすい価格でスピーディーにお手元へ。
             </p>
           </div>
@@ -90,31 +89,33 @@ const SportsBusiness: React.FC = () => {
       </section>
 
       {/* VALUES — 4 core service pillars */}
-      <section className="border-t border-white/5 bg-black py-24 md:py-32">
-        <div className="mx-auto max-w-[1400px] px-8 md:px-12">
-          <div className="mb-16 max-w-3xl md:mb-20">
-            <span className="mb-4 block font-display text-xs uppercase tracking-[0.45em] text-primary">
+      <section className="border-t border-white/5 bg-black py-10 md:py-32">
+        <div className="mx-auto max-w-[1400px] px-5 md:px-12">
+          <div className="mb-6 max-w-3xl md:mb-20">
+            <span className="mb-2 block font-display text-[10px] uppercase tracking-[0.45em] text-primary md:mb-4 md:text-xs">
               Service
             </span>
-            <h2 className="mb-8 font-display text-4xl uppercase leading-none tracking-tight text-white md:text-6xl">
-              HYDOORが<span className="italic text-primary">大切にすること</span>
+            <h2 className="mb-3 font-display text-xl uppercase leading-tight tracking-tight text-white sm:text-2xl md:mb-8 md:text-6xl md:leading-none">
+              <span className="whitespace-nowrap">
+                HYDOORが<span className="italic text-primary">大切にすること</span>
+              </span>
             </h2>
-            <p className="text-base leading-relaxed tracking-wider text-gray-400 md:text-lg">
+            <p className="text-xs leading-relaxed tracking-wider text-gray-400 md:text-lg">
               スポーツアパレルの販売店として、お客様に必要なものを、必要なタイミングで、無理のない価格でお届けする。
               そのために、品揃え・ご提案・価格・スピードの4つを大切にしています。
             </p>
           </div>
 
-          <div className="grid gap-px bg-white/5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-px bg-white/5 lg:grid-cols-4">
             {values.map((v) => (
-              <div key={v.title} className="bg-black p-10 transition-colors hover:bg-neutral-950 md:p-12">
-                <span className="material-symbols-outlined mb-8 block text-4xl text-primary">
+              <div key={v.title} className="bg-black p-4 transition-colors hover:bg-neutral-950 md:p-12">
+                <span className="material-symbols-outlined mb-3 block text-2xl text-primary md:mb-8 md:text-4xl">
                   {v.icon}
                 </span>
-                <h3 className="mb-4 font-display text-xl leading-snug text-white md:text-2xl">
+                <h3 className="mb-2 font-display text-sm leading-snug text-white md:mb-4 md:text-2xl">
                   {v.title}
                 </h3>
-                <p className="text-sm leading-relaxed tracking-wider text-gray-400">
+                <p className="text-[11px] leading-relaxed tracking-wider text-gray-400 md:text-sm">
                   {v.desc}
                 </p>
               </div>
@@ -124,36 +125,34 @@ const SportsBusiness: React.FC = () => {
       </section>
 
       {/* CATEGORIES — what we carry */}
-      <section className="border-t border-white/5 bg-neutral-950 py-24 md:py-32">
-        <div className="mx-auto max-w-[1400px] px-8 md:px-12">
-          <div className="mb-16 flex flex-col gap-2 md:mb-20 md:flex-row md:items-end md:justify-between">
+      <section className="border-t border-white/5 bg-neutral-950 py-10 md:py-32">
+        <div className="mx-auto max-w-[1400px] px-5 md:px-12">
+          <div className="mb-6 flex flex-col gap-2 md:mb-20 md:flex-row md:items-end md:justify-between">
             <div>
-              <span className="mb-4 block font-display text-xs uppercase tracking-[0.45em] text-primary">
+              <span className="mb-2 block font-display text-[10px] uppercase tracking-[0.45em] text-primary md:mb-4 md:text-xs">
                 Lineup
               </span>
-              <h2 className="font-display text-2xl uppercase leading-none tracking-tight text-white sm:text-3xl md:text-6xl">
+              <h2 className="font-display text-xl uppercase leading-none tracking-tight text-white sm:text-3xl md:text-6xl">
                 <span className="inline-block whitespace-nowrap [word-break:keep-all]">
                   取り扱い<span className="italic text-primary">アイテム</span>
                 </span>
               </h2>
             </div>
-            <p className="max-w-md text-sm leading-relaxed tracking-wider text-gray-500">
-              競技用から日常のトレーニング用品まで、幅広くお取り扱いしています。
-              <br />
-              掲載以外の商品もお気軽にご相談ください。
+            <p className="max-w-md text-xs leading-relaxed tracking-wider text-gray-500 md:text-sm">
+              競技用から日常のトレーニング用品まで、幅広くお取り扱いしています。掲載以外の商品もお気軽にご相談ください。
             </p>
           </div>
 
-          <div className="grid gap-px bg-white/5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-2 gap-px bg-white/5 lg:grid-cols-3">
             {categories.map((c) => (
-              <div key={c.title} className="bg-neutral-950 p-10 transition-colors hover:bg-black md:p-12">
-                <span className="material-symbols-outlined mb-6 block text-3xl text-primary">
+              <div key={c.title} className="bg-neutral-950 p-4 transition-colors hover:bg-black md:p-12">
+                <span className="material-symbols-outlined mb-2 block text-xl text-primary md:mb-6 md:text-3xl">
                   {c.icon}
                 </span>
-                <h3 className="mb-3 font-display text-lg leading-snug text-white md:text-xl">
+                <h3 className="mb-1 font-display text-sm leading-snug text-white md:mb-3 md:text-xl">
                   {c.title}
                 </h3>
-                <p className="text-sm leading-relaxed tracking-wider text-gray-400">
+                <p className="text-[11px] leading-relaxed tracking-wider text-gray-400 md:text-sm">
                   {c.desc}
                 </p>
               </div>
@@ -163,30 +162,30 @@ const SportsBusiness: React.FC = () => {
       </section>
 
       {/* FLOW — how to order */}
-      <section className="border-t border-white/5 bg-black py-24 md:py-32">
-        <div className="mx-auto max-w-[1400px] px-8 md:px-12">
-          <div className="mb-16 max-w-3xl md:mb-20">
-            <span className="mb-4 block font-display text-xs uppercase tracking-[0.45em] text-primary">
+      <section className="border-t border-white/5 bg-black py-10 md:py-32">
+        <div className="mx-auto max-w-[1400px] px-5 md:px-12">
+          <div className="mb-6 max-w-3xl md:mb-20">
+            <span className="mb-2 block font-display text-[10px] uppercase tracking-[0.45em] text-primary md:mb-4 md:text-xs">
               Flow
             </span>
-            <h2 className="font-display text-4xl uppercase leading-none tracking-tight text-white md:text-6xl">
+            <h2 className="font-display text-2xl uppercase leading-none tracking-tight text-white md:text-6xl">
               ご利用<span className="italic text-primary">の流れ</span>
             </h2>
           </div>
 
-          <div className="grid gap-px bg-white/5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-px bg-white/5 lg:grid-cols-4">
             {flow.map((step) => (
-              <div key={step.no} className="bg-black p-10 md:p-12">
-                <div className="mb-8 flex items-baseline gap-4">
-                  <span className="font-display text-5xl font-black tracking-tighter text-primary">
+              <div key={step.no} className="bg-black p-4 md:p-12">
+                <div className="mb-3 flex items-baseline gap-2 md:mb-8 md:gap-4">
+                  <span className="font-display text-3xl font-black tracking-tighter text-primary md:text-5xl">
                     {step.no}
                   </span>
                   <span className="h-px flex-1 bg-white/10" />
                 </div>
-                <h3 className="mb-4 font-display text-xl leading-snug text-white md:text-2xl">
+                <h3 className="mb-1 font-display text-sm leading-snug text-white md:mb-4 md:text-2xl">
                   {step.title}
                 </h3>
-                <p className="text-sm leading-relaxed tracking-wider text-gray-400">
+                <p className="text-[11px] leading-relaxed tracking-wider text-gray-400 md:text-sm">
                   {step.desc}
                 </p>
               </div>
@@ -196,7 +195,7 @@ const SportsBusiness: React.FC = () => {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden border-t border-white/5 bg-neutral-950 py-24 md:py-36">
+      <section className="relative overflow-hidden border-t border-white/5 bg-neutral-950 py-10 md:py-36">
         <div className="absolute inset-0 opacity-20">
           <img
             src="/images/performance-gear.png?v=20260419"
@@ -207,29 +206,29 @@ const SportsBusiness: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-neutral-950 via-neutral-950/85 to-black" />
 
         <div className="relative z-10 mx-auto max-w-[1100px] px-4 text-center sm:px-6 md:px-12">
-          <span className="mb-6 block font-display text-xs uppercase tracking-[0.45em] text-primary">
+          <span className="mb-3 block font-display text-[10px] uppercase tracking-[0.45em] text-primary md:mb-6 md:text-xs">
             Contact
           </span>
-          <h2 className="mb-8 text-center font-display leading-tight tracking-tight">
+          <h2 className="mb-4 text-center font-display leading-tight tracking-tight md:mb-8">
             <span className="inline-block whitespace-nowrap text-[clamp(1rem,5.2vw,2.5rem)] lg:text-6xl">
               <span className="text-white">まずは、お気軽に</span>
               <span className="text-primary">ご相談ください。</span>
             </span>
           </h2>
-          <p className="mx-auto mb-12 max-w-2xl text-base leading-relaxed tracking-wider text-gray-400 md:text-lg">
+          <p className="mx-auto mb-6 max-w-2xl text-xs leading-relaxed tracking-wider text-gray-400 md:mb-12 md:text-lg">
             個人のお買い物から、チーム単位のまとめ発注まで対応いたします。
             ご希望の商品・数量・お届け時期をお聞かせいただければ、最適なご提案をいたします。
           </p>
-          <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
+          <div className="flex flex-col items-center justify-center gap-3 md:flex-row md:gap-4">
             <Link
               to="/contact"
-              className="inline-block border border-primary bg-primary px-12 py-5 font-black text-[10px] tracking-[0.3em] text-black transition-all hover:bg-white hover:border-white"
+              className="inline-block w-full max-w-xs border border-primary bg-primary px-6 py-3 font-black text-[10px] tracking-[0.3em] text-black transition-all hover:bg-white hover:border-white md:w-auto md:px-12 md:py-5"
             >
               お問い合わせ
             </Link>
             <Link
               to="/"
-              className="inline-block border border-white/30 px-12 py-5 font-black text-[10px] tracking-[0.3em] text-white transition-all hover:border-primary hover:text-primary"
+              className="inline-block w-full max-w-xs border border-white/30 px-6 py-3 font-black text-[10px] tracking-[0.3em] text-white transition-all hover:border-primary hover:text-primary md:w-auto md:px-12 md:py-5"
             >
               事業全体を見る
             </Link>

@@ -40,95 +40,95 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="w-full bg-black min-h-screen pt-40">
-      <div className="max-w-[1600px] mx-auto px-8 md:px-12 py-20">
-        <div className="mb-32">
-          <span className="text-primary font-display text-2xl tracking-[0.5em] block mb-6 italic">Connect With Us</span>
-          <h1 className="text-7xl md:text-[12rem] font-display leading-[0.8] tracking-tighter italic uppercase">GET IN <span className="text-primary not-italic">TOUCH</span></h1>
+    <div className="w-full min-h-screen bg-black pt-24 md:pt-40">
+      <div className="mx-auto max-w-[1600px] px-5 py-6 md:px-12 md:py-20">
+        <div className="mb-6 text-left md:mb-16">
+          <span className="mb-2 block font-display text-xs italic tracking-[0.4em] text-primary md:mb-6 md:text-2xl md:tracking-[0.5em]">Connect With Us</span>
+          <h1 className="font-display text-4xl uppercase italic leading-[0.85] tracking-tighter sm:text-5xl md:text-[12rem] md:leading-[0.8]">GET IN <span className="not-italic text-primary">TOUCH</span></h1>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-24">
+        <div className="flex flex-col gap-6 lg:flex-row lg:gap-12">
           {/* Form */}
-          <div className="flex-grow glass p-12 md:p-16 border border-white/5 shadow-2xl">
+          <div className="glass flex-grow border border-white/5 p-5 shadow-2xl md:p-12">
             {status === 'success' ? (
-              <div className="flex flex-col items-center justify-center py-24 text-center space-y-8">
-                <span className="material-symbols-outlined text-primary text-6xl">check_circle</span>
-                <h3 className="text-white text-3xl font-display tracking-widest">送信完了</h3>
-                <p className="text-gray-400 text-sm tracking-widest leading-relaxed max-w-md">
+              <div className="flex flex-col items-center justify-center space-y-6 py-12 text-center md:space-y-8 md:py-24">
+                <span className="material-symbols-outlined text-5xl text-primary md:text-6xl">check_circle</span>
+                <h3 className="font-display text-2xl tracking-widest text-white md:text-3xl">送信完了</h3>
+                <p className="max-w-md text-xs leading-relaxed tracking-widest text-gray-400 md:text-sm">
                   お問い合わせありがとうございます。<br />
                   内容を確認のうえ、担当より折り返しご連絡いたします。
                 </p>
                 <button
                   onClick={() => setStatus('idle')}
-                  className="mt-8 px-12 py-4 border border-white/20 text-white text-[10px] font-black tracking-[0.3em] uppercase hover:border-primary hover:text-primary transition-all"
+                  className="mt-4 border border-white/20 px-8 py-3 text-[10px] font-black uppercase tracking-[0.3em] text-white transition-all hover:border-primary hover:text-primary md:mt-8 md:px-12 md:py-4"
                 >
                   New Inquiry
                 </button>
               </div>
             ) : (
-              <form className="space-y-12" onSubmit={handleSubmit}>
-                <div className="grid md:grid-cols-2 gap-12">
-                  <div className="space-y-4">
-                    <label className="text-[10px] font-black tracking-[0.3em] uppercase text-gray-500">Your Name <span className="text-primary">*</span></label>
+              <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
+                <div className="grid gap-4 md:grid-cols-2 md:gap-6">
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-500">Your Name <span className="text-primary">*</span></label>
                     <input
                       type="text"
                       required
                       placeholder="FULL NAME"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className="w-full bg-neutral-900/50 border-white/10 text-white p-5 text-xs tracking-widest focus:ring-1 focus:ring-primary focus:border-primary transition-all rounded-none"
+                      className="w-full rounded-none border-white/10 bg-neutral-900/50 p-3 text-xs tracking-widest text-white transition-all focus:border-primary focus:ring-1 focus:ring-primary md:p-4"
                     />
                   </div>
-                  <div className="space-y-4">
-                    <label className="text-[10px] font-black tracking-[0.3em] uppercase text-gray-500">Company</label>
+                  <div className="space-y-2">
+                    <label className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-500">Company</label>
                     <input
                       type="text"
                       placeholder="ORGANIZATION"
                       value={company}
                       onChange={(e) => setCompany(e.target.value)}
-                      className="w-full bg-neutral-900/50 border-white/10 text-white p-5 text-xs tracking-widest focus:ring-1 focus:ring-primary focus:border-primary transition-all rounded-none"
+                      className="w-full rounded-none border-white/10 bg-neutral-900/50 p-3 text-xs tracking-widest text-white transition-all focus:border-primary focus:ring-1 focus:ring-primary md:p-4"
                     />
                   </div>
                 </div>
 
-                <div className="space-y-4">
-                  <label className="text-[10px] font-black tracking-[0.3em] uppercase text-gray-500">Email Address <span className="text-primary">*</span></label>
+                <div className="space-y-2">
+                  <label className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-500">Email Address <span className="text-primary">*</span></label>
                   <input
                     type="email"
                     required
                     placeholder="EMAIL@EXAMPLE.COM"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full bg-neutral-900/50 border-white/10 text-white p-5 text-xs tracking-widest focus:ring-1 focus:ring-primary focus:border-primary transition-all rounded-none"
+                    className="w-full rounded-none border-white/10 bg-neutral-900/50 p-3 text-xs tracking-widest text-white transition-all focus:border-primary focus:ring-1 focus:ring-primary md:p-4"
                   />
                 </div>
 
-                <div className="space-y-4">
-                  <label className="text-[10px] font-black tracking-[0.3em] uppercase text-gray-500">Message <span className="text-primary">*</span></label>
+                <div className="space-y-2">
+                  <label className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-500">Message <span className="text-primary">*</span></label>
                   <textarea
-                    rows={6}
+                    rows={4}
                     required
                     placeholder="HOW CAN WE ASSIST YOU?"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="w-full bg-neutral-900/50 border-white/10 text-white p-5 text-xs tracking-widest focus:ring-1 focus:ring-primary focus:border-primary transition-all rounded-none"
+                    className="w-full rounded-none border-white/10 bg-neutral-900/50 p-3 text-xs tracking-widest text-white transition-all focus:border-primary focus:ring-1 focus:ring-primary md:p-4"
                   />
                 </div>
 
                 {status === 'error' && (
-                  <div className="flex items-center gap-4 p-5 bg-red-500/10 border border-red-500/30">
-                    <span className="material-symbols-outlined text-red-400 text-xl">error</span>
-                    <p className="text-red-400 text-xs tracking-widest">{errorMessage}</p>
+                  <div className="flex items-center gap-3 border border-red-500/30 bg-red-500/10 p-3">
+                    <span className="material-symbols-outlined text-base text-red-400">error</span>
+                    <p className="text-[11px] tracking-wider text-red-400 md:text-xs">{errorMessage}</p>
                   </div>
                 )}
 
                 <button
                   type="submit"
                   disabled={status === 'sending'}
-                  className="w-full py-8 bg-white text-black font-black text-[10px] tracking-[0.5em] hover:bg-primary transition-all flex items-center justify-center gap-6 group disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="group flex w-full items-center justify-center gap-4 bg-white py-4 text-[10px] font-black tracking-[0.4em] text-black transition-all hover:bg-primary disabled:cursor-not-allowed disabled:opacity-50 md:py-5 md:tracking-[0.5em]"
                 >
                   {status === 'sending' ? 'SENDING...' : 'SUBMIT INQUIRY'}
-                  <span className="material-symbols-outlined text-xl group-hover:translate-x-2 transition-transform">
+                  <span className="material-symbols-outlined text-base transition-transform group-hover:translate-x-2 md:text-xl">
                     {status === 'sending' ? 'hourglass_top' : 'arrow_forward'}
                   </span>
                 </button>
@@ -137,24 +137,21 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Info Sidebar */}
-          <div className="lg:w-96 space-y-16">
-            <div className="p-12 glass border border-white/5 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-[60px]"></div>
-              <h3 className="font-display text-3xl mb-12 flex items-center gap-6 tracking-widest">
-                <span className="w-10 h-[1px] bg-primary"></span>
+          <div className="space-y-6 lg:w-72">
+            <div className="glass relative overflow-hidden border border-white/5 p-5 md:p-8">
+              <div className="absolute right-0 top-0 h-24 w-24 rounded-full bg-primary/10 blur-[60px]"></div>
+              <h3 className="mb-4 flex items-center gap-3 font-display text-lg tracking-widest md:mb-6 md:text-2xl">
+                <span className="h-[1px] w-6 bg-primary md:w-10"></span>
                 CONTACT
               </h3>
-              <div className="space-y-10">
-                <div className="space-y-4">
-                  <p className="text-[9px] text-primary font-black tracking-[0.4em] uppercase">Primary Email</p>
-                  <p className="text-sm text-gray-200 font-bold tracking-widest break-all">info@hydoor.jp</p>
+              <div className="space-y-4">
+                <div className="space-y-1">
+                  <p className="text-[9px] font-black uppercase tracking-[0.4em] text-primary">Primary Email</p>
+                  <p className="break-all text-xs font-bold tracking-widest text-gray-200 md:text-sm">info@hydoor.jp</p>
                 </div>
-                <div className="space-y-4">
-                  <p className="text-xs text-gray-500 tracking-widest leading-relaxed">
-                    ご相談・ご依頼はフォームにて受け付けています。<br />
-                    内容確認後、担当より折り返しご連絡します。
-                  </p>
-                </div>
+                <p className="text-[11px] leading-relaxed tracking-wider text-gray-500">
+                  ご相談・ご依頼はフォームにて受け付けています。内容確認後、担当より折り返しご連絡します。
+                </p>
               </div>
             </div>
           </div>
