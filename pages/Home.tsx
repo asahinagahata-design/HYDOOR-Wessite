@@ -8,7 +8,7 @@ const Home: React.FC = () => {
   return (
     <div className="w-full bg-black">
       {/* Dynamic Hero Section */}
-      <section className="relative h-screen flex items-end justify-center overflow-hidden pb-8 md:items-end md:pb-6">
+      <section className="relative h-screen flex items-end justify-center overflow-hidden pb-2 md:items-end md:pb-6">
         <div className="absolute inset-0 z-0">
           <video
             className="w-full h-full object-cover opacity-60 contrast-110 scale-100"
@@ -39,12 +39,12 @@ const Home: React.FC = () => {
               Forging the Future of Performance
             </h2>
           </div>
-          <h1 className="mb-6 flex flex-col items-center font-display leading-[0.82] tracking-tighter text-white text-[clamp(7rem,27vw,11rem)] md:mb-4 md:text-[5.5rem] lg:text-[8rem] xl:text-[10rem]">
+          <h1 className="mb-3 flex flex-col items-center font-display leading-[0.82] tracking-tighter text-white text-[clamp(7rem,27vw,11rem)] md:mb-4 md:text-[5.5rem] lg:text-[8rem] xl:text-[10rem]">
             <span className="block animate-in slide-in-from-right duration-1000 delay-200">BEYOND THE</span>
             <span className="block text-primary text-glow animate-in slide-in-from-left duration-1000 delay-500">SURFACE</span>
           </h1>
 
-          <div className="max-w-xl mx-auto mb-6 opacity-0 animate-in fade-in duration-1000 delay-1000 fill-mode-forwards md:hidden">
+          <div className="max-w-xl mx-auto mb-3 opacity-0 animate-in fade-in duration-1000 delay-1000 fill-mode-forwards md:hidden">
             <p className="text-gray-200 text-xs md:text-sm font-medium tracking-widest leading-relaxed drop-shadow-xl">
               限界を超え、新たな高みへ。アスリートの情熱と最先端テクノロジーが交差する。
               HYDOORは、水面下で磨かれた真のパフォーマンスを、世界へ解き放つ。
