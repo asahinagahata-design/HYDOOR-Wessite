@@ -27,7 +27,7 @@ const values = [
 
 const categories = [
   { icon: 'checkroom', title: 'スポーツウェア', desc: '練習着・ユニフォーム・トレーニングウェア' },
-  { icon: 'directions_run', title: 'シューズ', desc: 'ランニング・トレーニング・競技用各種' },
+  { icon: 'sports_score', title: 'スポーツ用品全般', desc: 'ゴルフ・ボクシングなど各種競技に対応' },
   { icon: 'pool', title: '水泳用品', desc: '競泳水着・ゴーグル・キャップ・小物' },
   { icon: 'fitness_center', title: 'トレーニング用品', desc: 'ウェイト小物・補助具・ケア用品' },
   { icon: 'sports_basketball', title: '競技用具・小物', desc: '各競技に応じた周辺アイテム' },
@@ -65,7 +65,7 @@ const SportsBusiness: React.FC = () => {
         <img
           src="/images/performance-gear.png?v=20260419"
           alt="スポーツアパレル・パフォーマンスギア"
-          className="absolute inset-0 h-full w-full object-cover opacity-65"
+          className="absolute inset-0 h-full w-full object-cover object-center opacity-65 md:object-contain md:object-right"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/55 to-black/10" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />

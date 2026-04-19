@@ -91,13 +91,10 @@ const RentalService: React.FC = () => {
         <img
           src="/images/rental-hero.png?v=20260415"
           alt="マッサージベッド・フォームローラー・ストレッチ用品を置いたレンタル用ウェルネス空間"
-          className="absolute inset-0 h-full w-full object-cover object-right opacity-70 md:object-left md:opacity-60"
+          className="absolute inset-0 h-full w-full object-cover object-right opacity-70 md:object-right md:opacity-70"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/20 md:bg-gradient-to-r md:from-black md:via-black/50 md:to-transparent" />
         <div className="relative z-10 mx-auto w-full max-w-[1600px] px-5 pb-6 md:px-12 md:pb-0">
-          <span className="mb-3 inline-block border border-primary/60 bg-primary/10 px-3 py-1 text-[9px] font-black tracking-[0.3em] text-primary md:mb-4 md:px-4 md:py-1.5 md:text-[10px] md:tracking-[0.35em]">
-            FOR ATHLETES · FOR RENT
-          </span>
           <span className="mb-2 block font-display text-xs italic tracking-[0.3em] text-primary md:mb-6 md:text-xl">04</span>
           <h1 className="mb-3 font-display text-5xl leading-[0.85] tracking-tighter text-white md:mb-8 md:text-[6rem] md:leading-[0.8] lg:text-[7.5rem]">
             RENTAL
