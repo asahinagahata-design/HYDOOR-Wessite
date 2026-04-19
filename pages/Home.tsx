@@ -8,7 +8,7 @@ const Home: React.FC = () => {
   return (
     <div className="w-full bg-black">
       {/* Dynamic Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen flex items-end justify-center overflow-hidden pb-20 md:items-center md:pb-0">
         <div className="absolute inset-0 z-0">
           <video
             className="w-full h-full object-cover opacity-60 contrast-110 scale-100"
@@ -24,39 +24,39 @@ const Home: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20"></div>
         </div>
 
-        <div className="relative z-10 px-6 pt-28 text-center md:pt-0">
-          <div className="mb-8 opacity-0 animate-in fade-in duration-700 delay-200 fill-mode-forwards">
+        <div className="relative z-10 px-6 text-center">
+          <div className="mb-4 opacity-0 animate-in fade-in duration-700 delay-200 fill-mode-forwards md:mb-8">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-3 border border-primary/50 bg-black/40 px-6 py-3 text-[10px] font-black tracking-[0.25em] uppercase text-primary hover:bg-primary hover:text-black transition-all"
+              className="inline-flex items-center gap-3 border border-primary/50 bg-black/40 px-4 py-2 text-[9px] font-black tracking-[0.25em] uppercase text-primary hover:bg-primary hover:text-black transition-all md:px-6 md:py-3 md:text-[10px]"
             >
               お問い合わせはこちらから
               <span className="material-symbols-outlined text-base">north_east</span>
             </Link>
           </div>
-          <div className="overflow-hidden mb-6">
-            <h2 className="text-primary text-[10px] md:text-xs font-black tracking-[1.5em] uppercase animate-in slide-in-from-bottom duration-1000">
+          <div className="overflow-hidden mb-3 md:mb-6">
+            <h2 className="text-primary text-[9px] md:text-xs font-black tracking-[1em] md:tracking-[1.5em] uppercase animate-in slide-in-from-bottom duration-1000">
               Forging the Future of Performance
             </h2>
           </div>
-          <h1 className="mb-12 flex flex-col items-center font-display leading-[0.82] tracking-tighter text-white text-[clamp(4.75rem,17.5vw,7rem)] md:text-[9rem] lg:text-[12rem] xl:text-[14rem]">
+          <h1 className="mb-6 flex flex-col items-center font-display leading-[0.82] tracking-tighter text-white text-[clamp(7rem,27vw,11rem)] md:mb-12 md:text-[9rem] lg:text-[12rem] xl:text-[14rem]">
             <span className="block animate-in slide-in-from-right duration-1000 delay-200">BEYOND THE</span>
             <span className="block text-primary text-glow animate-in slide-in-from-left duration-1000 delay-500">SURFACE</span>
           </h1>
 
-          <div className="max-w-xl mx-auto mb-16 opacity-0 animate-in fade-in duration-1000 delay-1000 fill-mode-forwards">
-            <p className="text-gray-200 text-sm md:text-base font-medium tracking-widest leading-relaxed drop-shadow-xl">
+          <div className="max-w-xl mx-auto mb-6 opacity-0 animate-in fade-in duration-1000 delay-1000 fill-mode-forwards md:mb-16">
+            <p className="text-gray-200 text-xs md:text-base font-medium tracking-widest leading-relaxed drop-shadow-xl">
               限界を超え、新たな高みへ。アスリートの情熱と最先端テクノロジーが交差する。
               HYDOORは、水面下で磨かれた真のパフォーマンスを、世界へ解き放つ。
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 opacity-0 animate-in fade-in slide-in-from-bottom duration-1000 delay-1000 fill-mode-forwards">
-            <Link to="/sports" className="group relative px-16 py-5 bg-primary text-black font-black text-[10px] tracking-[0.3em] rounded-sm overflow-hidden transition-all hover:scale-105">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 opacity-0 animate-in fade-in slide-in-from-bottom duration-1000 delay-1000 fill-mode-forwards md:gap-6">
+            <Link to="/sports" className="group relative w-full max-w-xs px-8 py-3 bg-primary text-black font-black text-[10px] tracking-[0.3em] rounded-sm overflow-hidden transition-all hover:scale-105 sm:w-auto md:px-16 md:py-5">
               <span className="relative z-10">PERFORMANCE GEAR</span>
               <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
             </Link>
-            <Link to="/contact" className="px-16 py-5 border border-white/40 text-white font-black text-[10px] tracking-[0.3em] rounded-sm hover:border-primary hover:text-primary transition-all backdrop-blur-sm">
+            <Link to="/contact" className="w-full max-w-xs px-8 py-3 border border-white/40 text-white font-black text-[10px] tracking-[0.3em] rounded-sm hover:border-primary hover:text-primary transition-all backdrop-blur-sm sm:w-auto md:px-16 md:py-5">
               お問い合わせ
             </Link>
           </div>

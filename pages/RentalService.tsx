@@ -87,74 +87,74 @@ const RentalService: React.FC = () => {
   return (
     <div className="w-full bg-black">
       {/* Hero */}
-      <section className="relative h-[70vh] flex items-center overflow-hidden">
+      <section className="relative flex h-[55vh] items-end overflow-hidden md:h-[70vh] md:items-center">
         <img
           src="/images/rental-hero.png?v=20260415"
           alt="マッサージベッド・フォームローラー・ストレッチ用品を置いたレンタル用ウェルネス空間"
-          className="absolute inset-0 h-full w-full object-cover object-left opacity-60"
+          className="absolute inset-0 h-full w-full object-cover object-right opacity-70 md:object-left md:opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent" />
-        <div className="relative z-10 max-w-[1600px] mx-auto w-full px-8 md:px-12">
-          <span className="mb-4 inline-block border border-primary/60 bg-primary/10 px-4 py-1.5 text-[10px] font-black tracking-[0.35em] text-primary">
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/20 md:bg-gradient-to-r md:from-black md:via-black/50 md:to-transparent" />
+        <div className="relative z-10 mx-auto w-full max-w-[1600px] px-5 pb-6 md:px-12 md:pb-0">
+          <span className="mb-3 inline-block border border-primary/60 bg-primary/10 px-3 py-1 text-[9px] font-black tracking-[0.3em] text-primary md:mb-4 md:px-4 md:py-1.5 md:text-[10px] md:tracking-[0.35em]">
             FOR ATHLETES · FOR RENT
           </span>
-          <span className="text-primary font-display mb-6 block text-xl tracking-[0.3em] italic">04</span>
-          <h1 className="mb-8 font-display text-6xl leading-[0.8] tracking-tighter text-white md:text-[8rem]">
+          <span className="mb-2 block font-display text-xs italic tracking-[0.3em] text-primary md:mb-6 md:text-xl">04</span>
+          <h1 className="mb-3 font-display text-5xl leading-[0.85] tracking-tighter text-white md:mb-8 md:text-[8rem] md:leading-[0.8]">
             RENTAL
             <br />
             <span className="text-primary">SERVICE</span>
           </h1>
-          <p className="max-w-2xl text-lg leading-relaxed tracking-wider text-gray-200 md:text-xl">
-            大会・合宿・遠征の現場で、休む・整える・着替えるを支えるレンタル。
-            会場周辺での受け渡しにも対応し、アスリートの動線を軽くします。
+          <p className="max-w-2xl text-xs leading-relaxed tracking-wider text-gray-200 md:text-xl">
+            大会・合宿・遠征の現場で、休む・整える・着替えるを支えるレンタル。会場周辺での受け渡しにも対応し、アスリートの動線を軽くします。
           </p>
         </div>
-        <div className="absolute bottom-0 left-0 h-32 w-full bg-gradient-to-t from-black to-transparent" />
+        <div className="absolute bottom-0 left-0 h-16 w-full bg-gradient-to-t from-black to-transparent md:h-32" />
       </section>
 
       {/* Service overview */}
-      <section className="border-b border-white/10 bg-black py-24">
-        <div className="mx-auto max-w-5xl px-6">
-          <h2 className="mb-6 whitespace-nowrap font-display text-2xl tracking-tight text-white sm:text-3xl md:text-5xl">
-            会場直送のレンタルで、競技日の負担を減らす
+      <section className="border-b border-white/10 bg-black py-10 md:py-24">
+        <div className="mx-auto max-w-5xl px-5 md:px-6">
+          <h2 className="mb-3 font-display text-base leading-tight tracking-normal text-white [word-break:break-word] sm:text-2xl md:mb-6 md:text-5xl md:tracking-tight">
+            <span className="block">会場直送のレンタルで、</span>
+            <span className="block">競技日の負担を減らす</span>
           </h2>
-          <p className="mb-6 text-xs font-black tracking-[0.35em] text-primary">
+          <p className="mb-3 text-[10px] font-black tracking-[0.3em] text-primary md:mb-6 md:text-xs md:tracking-[0.35em]">
             マットレスレンタル · 大会会場エリアでの受取・返却（要予約）
           </p>
-          <p className="mb-10 text-base leading-loose tracking-wider text-gray-400 md:text-lg">
+          <p className="mb-5 text-xs leading-relaxed tracking-wider text-gray-400 md:mb-10 md:text-lg md:leading-loose">
             水泳・アーティスティックスイミングなどの大会をはじめ、スポーツイベント参加者向けに、マットレスを中心としたコンディショニング用品をレンタル提供しています。
             期間中は<span className="text-white">品目ごとの定額（税別）</span>でご利用いただけます。
           </p>
-          <div className="grid gap-1 border border-primary/30 bg-white/5 p-8 md:grid-cols-[1fr_auto] md:items-center md:gap-8">
+          <div className="grid gap-1 border border-primary/30 bg-white/5 p-4 md:grid-cols-[1fr_auto] md:items-center md:gap-8 md:p-8">
             <div>
-              <p className="mb-2 text-xs font-black tracking-[0.3em] text-primary">受取・返却（例）</p>
-              <p className="text-white md:text-lg">
+              <p className="mb-1 text-[10px] font-black tracking-[0.3em] text-primary md:mb-2 md:text-xs">受取・返却（例）</p>
+              <p className="text-xs text-white md:text-lg">
                 競技場内の特設ブースなど、大会会場エリアでの受け渡しが可能です。
-                <span className="mt-2 block text-sm text-gray-400">※要事前予約。開催・会場により異なります。</span>
+                <span className="mt-1 block text-[11px] text-gray-400 md:mt-2 md:text-sm">※要事前予約。開催・会場により異なります。</span>
               </p>
             </div>
-            <div className="border-t border-white/10 pt-6 md:border-l md:border-t-0 md:pl-8 md:pt-0">
-              <p className="text-xs font-black tracking-wider text-gray-500">マットレス「SPACE」大会期間中</p>
-              <p className="font-display text-3xl text-primary md:text-4xl">¥3,980</p>
-              <p className="text-xs text-gray-500">税別 · 1枚単位 · 数量限定・先着順</p>
+            <div className="border-t border-white/10 pt-3 md:border-l md:border-t-0 md:pl-8 md:pt-0">
+              <p className="text-[10px] font-black tracking-wider text-gray-500 md:text-xs">マットレス「SPACE」大会期間中</p>
+              <p className="font-display text-2xl text-primary md:text-4xl">¥3,980</p>
+              <p className="text-[10px] text-gray-500 md:text-xs">税別 · 1枚単位 · 数量限定・先着順</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Pain points */}
-      <section className="bg-black py-32">
-        <div className="mx-auto max-w-6xl px-6">
-          <span className="mb-4 block text-center font-display text-lg tracking-widest text-primary">Why Rent</span>
-          <h2 className="mb-16 text-center font-display text-4xl tracking-tight text-white md:text-5xl">
+      <section className="bg-black py-10 md:py-32">
+        <div className="mx-auto max-w-6xl px-5 md:px-6">
+          <span className="mb-2 block text-center font-display text-xs tracking-widest text-primary md:mb-4 md:text-lg">Why Rent</span>
+          <h2 className="mb-6 text-center font-display text-2xl tracking-tight text-white md:mb-16 md:text-5xl">
             こんなお悩みに、レンタルで応えます
           </h2>
-          <div className="grid gap-1 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-1 md:grid-cols-3">
             {painPoints.map((p) => (
-              <div key={p.title} className="border border-white/10 bg-white/5 p-8 transition-colors hover:bg-white/[0.07]">
-                <span className="material-symbols-outlined mb-6 block text-4xl text-primary">{p.icon}</span>
-                <h3 className="mb-4 text-lg font-bold text-white">{p.title}</h3>
-                <p className="text-sm leading-relaxed tracking-wider text-gray-400">{p.body}</p>
+              <div key={p.title} className="border border-white/10 bg-white/5 p-4 transition-colors hover:bg-white/[0.07] md:p-8">
+                <span className="material-symbols-outlined mb-3 block text-2xl text-primary md:mb-6 md:text-4xl">{p.icon}</span>
+                <h3 className="mb-2 text-sm font-bold text-white md:mb-4 md:text-lg">{p.title}</h3>
+                <p className="text-[11px] leading-relaxed tracking-wider text-gray-400 md:text-sm">{p.body}</p>
               </div>
             ))}
           </div>
@@ -162,49 +162,49 @@ const RentalService: React.FC = () => {
       </section>
 
       {/* Product lineup */}
-      <section className="border-t border-white/10 bg-neutral-950 py-32">
-        <div className="mx-auto max-w-6xl px-6">
-          <span className="mb-4 block text-center font-display text-lg tracking-widest text-primary">Lineup</span>
-          <h2 className="mb-6 text-center font-display text-4xl tracking-tight text-white md:text-6xl">
+      <section className="border-t border-white/10 bg-neutral-950 py-10 md:py-32">
+        <div className="mx-auto max-w-6xl px-5 md:px-6">
+          <span className="mb-2 block text-center font-display text-xs tracking-widest text-primary md:mb-4 md:text-lg">Lineup</span>
+          <h2 className="mb-3 text-center font-display text-2xl tracking-tight text-white md:mb-6 md:text-6xl">
             レンタル品目・料金
           </h2>
-          <p className="mx-auto mb-20 max-w-2xl text-center text-sm tracking-wider text-gray-400">
+          <p className="mx-auto mb-6 max-w-2xl text-center text-xs tracking-wider text-gray-400 md:mb-20 md:text-sm">
             表示価格はすべて税別です。在庫・会場・日程によりご用意できない場合があります。
           </p>
 
-          <div className="space-y-1">
+          <div className="grid grid-cols-2 gap-1 md:grid-cols-1">
             {rentalProducts.map((p) => (
               <div
                 key={p.name + (p.sub ?? '')}
-                className={`grid gap-6 border p-8 transition-colors md:grid-cols-[auto_1fr_auto] md:items-start md:gap-10 ${
+                className={`flex flex-col gap-2 border p-3 transition-colors md:grid md:grid-cols-[auto_1fr_auto] md:items-start md:gap-10 md:p-8 ${
                   p.featured
                     ? 'border-primary/40 bg-primary/5 hover:bg-primary/[0.08]'
                     : 'border-white/10 bg-white/5 hover:bg-white/[0.07]'
                 }`}
               >
-                <span className="material-symbols-outlined text-3xl text-primary md:mt-1">{p.icon}</span>
+                <span className="material-symbols-outlined text-xl text-primary md:mt-1 md:text-3xl">{p.icon}</span>
                 <div>
-                  <div className="mb-2 flex flex-wrap items-baseline gap-3">
-                    <h3 className="text-xl font-bold text-white md:text-2xl">{p.name}</h3>
-                    {p.sub && <span className="text-sm font-black tracking-wider text-primary">{p.sub}</span>}
+                  <div className="mb-1 flex flex-wrap items-baseline gap-1.5 md:mb-2 md:gap-3">
+                    <h3 className="text-xs font-bold leading-tight text-white md:text-2xl">{p.name}</h3>
+                    {p.sub && <span className="text-[10px] font-black tracking-wider text-primary md:text-sm">{p.sub}</span>}
                     {p.featured && (
-                      <span className="rounded-sm bg-primary/20 px-2 py-0.5 text-[9px] font-black tracking-widest text-primary">
+                      <span className="rounded-sm bg-primary/20 px-1.5 py-0.5 text-[8px] font-black tracking-widest text-primary md:px-2 md:text-[9px]">
                         FEATURED
                       </span>
                     )}
                   </div>
-                  <p className="mb-3 text-sm leading-relaxed tracking-wider text-gray-300">{p.desc}</p>
-                  <p className="text-xs tracking-wider text-gray-500">サイズ {p.size}</p>
+                  <p className="mb-2 text-[10px] leading-relaxed tracking-wider text-gray-300 md:mb-3 md:text-sm">{p.desc}</p>
+                  <p className="text-[9px] tracking-wider text-gray-500 md:text-xs">サイズ {p.size}</p>
                 </div>
-                <div className="text-left md:text-right">
-                  <p className="font-display text-3xl text-white">{p.price}</p>
-                  <p className="text-xs text-gray-500">税別</p>
+                <div className="mt-auto text-left md:text-right">
+                  <p className="font-display text-lg text-white md:text-3xl">{p.price}</p>
+                  <p className="text-[9px] text-gray-500 md:text-xs">税別</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <ul className="mt-16 space-y-3 border border-white/10 bg-black/40 p-8 text-sm text-gray-400">
+          <ul className="mt-6 space-y-2 border border-white/10 bg-black/40 p-4 text-[11px] text-gray-400 md:mt-16 md:space-y-3 md:p-8 md:text-sm">
             <li className="flex gap-2">
               <span className="text-primary">※</span>
               ご予約・お申し込みは先着順です。品切れの際はご容赦ください。
@@ -222,14 +222,14 @@ const RentalService: React.FC = () => {
       </section>
 
       {/* CTA */}
-      <section className="bg-black py-32 text-center px-6">
-        <h2 className="mb-6 font-display text-3xl tracking-tight text-white md:text-5xl">ご予約・お見積り</h2>
-        <p className="mx-auto mb-12 max-w-xl text-sm tracking-wider text-gray-400">
+      <section className="bg-black px-5 py-10 text-center md:px-6 md:py-32">
+        <h2 className="mb-3 font-display text-xl tracking-tight text-white md:mb-6 md:text-5xl">ご予約・お見積り</h2>
+        <p className="mx-auto mb-6 max-w-xl text-xs tracking-wider text-gray-400 md:mb-12 md:text-sm">
           大会名、希望品目・数量、利用日をお知らせください。担当より折り返しご連絡します。
         </p>
         <Link
           to="/contact"
-          className="inline-block bg-white px-16 py-5 font-black text-[10px] tracking-[0.3em] text-black transition-all hover:scale-105 hover:bg-primary"
+          className="inline-block bg-white px-8 py-3 font-black text-[10px] tracking-[0.3em] text-black transition-all hover:scale-105 hover:bg-primary md:px-16 md:py-5"
         >
           お問い合わせ
         </Link>
