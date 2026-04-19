@@ -37,7 +37,7 @@ const AiSystem: React.FC = () => {
   return (
     <div className="w-full bg-black">
       {/* Hero */}
-      <section className="relative flex h-[55vh] items-center overflow-hidden md:h-[70vh]">
+      <section className="relative flex h-[55vh] items-center overflow-hidden md:h-auto md:min-h-[85vh] md:pt-40 md:pb-20">
         <img
           src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=2000"
           alt="AI & System"
@@ -46,7 +46,7 @@ const AiSystem: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent" />
         <div className="relative z-10 mx-auto w-full max-w-[1600px] px-5 md:px-12">
           <span className="mb-3 block font-display text-xs italic tracking-[0.3em] text-primary md:mb-6 md:text-xl">06</span>
-          <h1 className="mb-4 font-display text-5xl leading-[0.85] tracking-tighter text-white md:mb-8 md:text-[10rem] md:leading-[0.8]">
+          <h1 className="mb-4 font-display text-5xl leading-[0.85] tracking-tighter text-white md:mb-8 md:text-[6rem] md:leading-[0.8] lg:text-[8rem]">
             AI &<br /><span className="text-primary">SYSTEM</span>
           </h1>
           <p className="max-w-2xl text-xs leading-relaxed tracking-wider text-gray-200 md:text-xl md:tracking-widest">

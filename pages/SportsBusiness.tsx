@@ -61,7 +61,7 @@ const SportsBusiness: React.FC = () => {
   return (
     <div className="w-full bg-black">
       {/* HERO */}
-      <section className="relative flex min-h-[60vh] items-center overflow-hidden md:min-h-[85vh]">
+      <section className="relative flex min-h-[60vh] items-center overflow-hidden md:min-h-[85vh] md:pt-40 md:pb-20">
         <img
           src="/images/performance-gear.png?v=20260419"
           alt="スポーツアパレル・パフォーマンスギア"
@@ -75,7 +75,7 @@ const SportsBusiness: React.FC = () => {
             <span className="mb-3 block font-display text-xs italic tracking-[0.3em] text-primary md:mb-6 md:text-xl">
               01 — HYDOOR SPORTS
             </span>
-            <h1 className="mb-4 font-display text-5xl leading-[0.85] tracking-tighter text-white md:mb-10 md:text-[10rem]">
+            <h1 className="mb-4 font-display text-5xl leading-[0.85] tracking-tighter text-white md:mb-8 md:text-[6rem] lg:text-[8rem]">
               PERFORMANCE
               <br />
               <span className="text-primary">GEAR</span>

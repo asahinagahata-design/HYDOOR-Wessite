@@ -87,7 +87,7 @@ const RentalService: React.FC = () => {
   return (
     <div className="w-full bg-black">
       {/* Hero */}
-      <section className="relative flex h-[55vh] items-end overflow-hidden md:h-[70vh] md:items-center">
+      <section className="relative flex h-[55vh] items-end overflow-hidden md:h-auto md:min-h-[85vh] md:items-center md:pt-40 md:pb-20">
         <img
           src="/images/rental-hero.png?v=20260415"
           alt="マッサージベッド・フォームローラー・ストレッチ用品を置いたレンタル用ウェルネス空間"
@@ -99,7 +99,7 @@ const RentalService: React.FC = () => {
             FOR ATHLETES · FOR RENT
           </span>
           <span className="mb-2 block font-display text-xs italic tracking-[0.3em] text-primary md:mb-6 md:text-xl">04</span>
-          <h1 className="mb-3 font-display text-5xl leading-[0.85] tracking-tighter text-white md:mb-8 md:text-[8rem] md:leading-[0.8]">
+          <h1 className="mb-3 font-display text-5xl leading-[0.85] tracking-tighter text-white md:mb-8 md:text-[6rem] md:leading-[0.8] lg:text-[7.5rem]">
             RENTAL
             <br />
             <span className="text-primary">SERVICE</span>

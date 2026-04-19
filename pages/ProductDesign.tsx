@@ -27,7 +27,7 @@ const ProductDesign: React.FC = () => {
   return (
     <div className="w-full bg-black">
       {/* Hero */}
-      <section className="relative flex h-[55vh] items-center overflow-hidden md:h-[70vh]">
+      <section className="relative flex h-[55vh] items-center overflow-hidden md:h-auto md:min-h-[85vh] md:pt-40 md:pb-20">
         <img
           src="/images/product-design.jpeg?v=2"
           alt="プロダクトデザイン・制作の様子"
@@ -36,7 +36,7 @@ const ProductDesign: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent" />
         <div className="relative z-10 mx-auto w-full max-w-[1600px] px-5 md:px-12">
           <span className="mb-3 block font-display text-xs italic tracking-[0.3em] text-primary md:mb-6 md:text-xl">02</span>
-          <h1 className="mb-4 font-display text-5xl leading-[0.85] tracking-tighter text-white md:mb-8 md:text-[10rem]">
+          <h1 className="mb-4 font-display text-5xl leading-[0.85] tracking-tighter text-white md:mb-8 md:text-[6rem] lg:text-[8rem]">
             PRODUCT
             <br />
             <span className="text-primary">DESIGN</span>

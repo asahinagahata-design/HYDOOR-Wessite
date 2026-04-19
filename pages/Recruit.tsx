@@ -27,7 +27,7 @@ const Recruit: React.FC = () => {
   return (
     <div className="w-full bg-black">
       {/* Hero */}
-      <section className="relative flex h-[40vh] items-center justify-center overflow-hidden md:h-[60vh]">
+      <section className="relative flex h-[40vh] items-center justify-center overflow-hidden md:h-auto md:min-h-[70vh] md:pt-40 md:pb-20">
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-40 grayscale scale-105"
           style={{ backgroundImage: `url("https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1920")` }}
@@ -35,7 +35,7 @@ const Recruit: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black"></div>
         <div className="relative z-10 px-5 text-center">
           <span className="mb-2 block font-display text-xs italic tracking-[0.4em] text-primary md:mb-4 md:text-2xl md:tracking-[0.5em]">Join Our Mission</span>
-          <h1 className="mb-3 font-display text-5xl italic tracking-tighter text-white md:mb-8 md:text-[10rem]">RECRUIT</h1>
+          <h1 className="mb-3 font-display text-5xl italic tracking-tighter text-white md:mb-8 md:text-[7rem] lg:text-[9rem]">RECRUIT</h1>
           <div className="mx-auto max-w-2xl">
             <p className="text-xs font-medium leading-relaxed tracking-wider text-gray-400 md:text-lg md:tracking-widest">
               未知の領域へ。共に世界を驚かせるプロダクトを創り出す、情熱を持ったプロフェッショナルを求めています。
@@ -47,7 +47,7 @@ const Recruit: React.FC = () => {
       {/* Positions */}
       <section className="bg-black py-10 md:py-40">
         <div className="mx-auto max-w-[1200px] px-5 md:px-8">
-          <div className="mb-6 flex flex-col items-start justify-between gap-3 border-b border-white/10 pb-4 md:mb-12 md:flex-row md:items-end md:gap-8 md:pb-12">
+          <div className="mb-6 flex flex-col items-start justify-between gap-3 border-b border-white/10 pb-4 md:mb-12 md:items-start md:gap-3 md:pb-12">
             <div className="max-w-md text-left">
               <span className="mb-1 block text-[10px] font-black uppercase tracking-[0.4em] text-primary md:mb-4">Open Positions</span>
               <h2 className="font-display text-3xl tracking-tight md:text-6xl">CAREERS</h2>

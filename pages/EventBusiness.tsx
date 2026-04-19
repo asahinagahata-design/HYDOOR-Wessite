@@ -6,7 +6,7 @@ const EventBusiness: React.FC = () => {
   return (
     <div className="w-full bg-black">
       {/* Hero */}
-      <section className="relative flex h-[55vh] items-center overflow-hidden md:h-[80vh]">
+      <section className="relative flex h-[55vh] items-center overflow-hidden md:h-auto md:min-h-[90vh] md:pt-40 md:pb-20">
         <img
           src="/images/aqua-magic-hero.png?v=3"
           alt="夕景の中でヨガを行うシルエット"
@@ -15,7 +15,7 @@ const EventBusiness: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent" />
         <div className="relative z-10 mx-auto w-full max-w-[1600px] px-5 md:px-12">
           <span className="mb-3 block font-display text-xs italic tracking-[0.3em] text-primary md:mb-6 md:text-xl">03 — RAIKA ENTERTAINMENT</span>
-          <h1 className="mb-4 font-display text-5xl leading-[0.85] tracking-tighter text-white md:mb-8 md:text-[10rem] md:leading-[0.8]">
+          <h1 className="mb-4 font-display text-5xl leading-[0.85] tracking-tighter text-white md:mb-8 md:text-[6rem] md:leading-[0.8] lg:text-[8rem]">
             AQUA<br /><span className="text-primary drop-shadow-[0_0_40px_rgba(242,185,13,0.4)]">MAGIC</span>
           </h1>
           <p className="max-w-2xl text-sm leading-relaxed tracking-wider text-gray-200 md:text-2xl md:tracking-widest">
