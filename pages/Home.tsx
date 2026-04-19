@@ -8,7 +8,7 @@ const Home: React.FC = () => {
   return (
     <div className="w-full bg-black">
       {/* Dynamic Hero Section */}
-      <section className="relative h-screen flex items-end justify-center overflow-hidden pb-20 md:items-center md:pb-0">
+      <section className="relative h-screen flex items-end justify-center overflow-hidden pb-20 md:items-end md:pb-24">
         <div className="absolute inset-0 z-0">
           <video
             className="w-full h-full object-cover opacity-60 contrast-110 scale-100"
@@ -62,12 +62,6 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-12 left-12 hidden md:block opacity-40">
-          <div className="flex items-center gap-4">
-            <span className="h-[1px] w-20 bg-primary"></span>
-            <span className="font-display text-xl tracking-widest text-primary">SCROLL TO DISCOVER</span>
-          </div>
-        </div>
       </section>
 
       {/* Expertise Section - High Contrast Grid */}

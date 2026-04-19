@@ -85,61 +85,61 @@ const JobDetail: React.FC = () => {
   if (!job) return <div className="py-40 text-center text-white bg-black min-h-screen">Job not found</div>;
 
   return (
-    <div className="bg-black py-24 min-h-screen pt-40">
-      <div className="max-w-4xl mx-auto px-6">
+    <div className="min-h-screen bg-black pt-24 md:py-24 md:pt-40">
+      <div className="mx-auto max-w-4xl px-5 py-6 md:px-6 md:py-0">
         <button 
           onClick={() => navigate('/recruit')}
-          className="flex items-center gap-2 text-gray-500 hover:text-primary transition-colors mb-12 font-bold"
+          className="mb-4 flex items-center gap-2 text-[11px] font-bold text-gray-500 transition-colors hover:text-primary md:mb-12 md:text-base"
         >
-          <span className="material-symbols-outlined">arrow_back</span>
+          <span className="material-symbols-outlined text-base md:text-2xl">arrow_back</span>
           BACK TO POSITIONS
         </button>
 
-        <div className="bg-neutral-900 p-10 md:p-16 border border-white/10">
-          <div className="flex items-center gap-4 mb-8">
-            <span className="px-4 py-1 bg-primary text-black text-[10px] font-black tracking-widest uppercase">{job.dept}</span>
-            <span className="text-gray-400 text-xs font-black tracking-widest uppercase">{job.type}</span>
+        <div className="border border-white/10 bg-neutral-900 p-5 md:p-16">
+          <div className="mb-4 flex flex-wrap items-center gap-2 md:mb-8 md:gap-4">
+            <span className="bg-primary px-3 py-1 text-[9px] font-black uppercase tracking-widest text-black md:px-4 md:text-[10px]">{job.dept}</span>
+            <span className="text-[9px] font-black uppercase tracking-widest text-gray-400 md:text-xs">{job.type}</span>
           </div>
           
-          <h1 className="text-white text-4xl md:text-5xl font-black mb-10 tracking-tight">{job.title}</h1>
-          <p className="text-gray-300 text-xl leading-loose mb-16 pb-16 border-b border-white/10">
+          <h1 className="mb-4 text-2xl font-black tracking-tight text-white md:mb-10 md:text-5xl">{job.title}</h1>
+          <p className="mb-6 border-b border-white/10 pb-6 text-xs leading-relaxed text-gray-300 md:mb-16 md:pb-16 md:text-xl md:leading-loose">
             {job.desc}
           </p>
 
-          <div className="grid md:grid-cols-1 gap-12">
+          <div className="grid gap-6 md:grid-cols-1 md:gap-12">
             <div>
-              <h2 className="text-white text-2xl font-black mb-8 flex items-center gap-4">
-                <span className="w-8 h-1 bg-primary"></span>
+              <h2 className="mb-4 flex items-center gap-3 text-base font-black text-white md:mb-8 md:gap-4 md:text-2xl">
+                <span className="h-0.5 w-5 bg-primary md:h-1 md:w-8"></span>
                 主な業務内容
               </h2>
-              <ul className="space-y-4">
+              <ul className="space-y-2 md:space-y-4">
                 {job.responsibilities.map((item: string, i: number) => (
-                  <li key={i} className="flex items-start gap-4 text-gray-300">
-                    <span className="material-symbols-outlined text-primary text-xl mt-1">check_circle</span>
-                    <span className="text-lg">{item}</span>
+                  <li key={i} className="flex items-start gap-2 text-gray-300 md:gap-4">
+                    <span className="material-symbols-outlined mt-0.5 text-base text-primary md:mt-1 md:text-xl">check_circle</span>
+                    <span className="text-xs leading-relaxed md:text-lg">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="mt-12">
-              <h2 className="text-white text-2xl font-black mb-8 flex items-center gap-4">
-                <span className="w-8 h-1 bg-primary"></span>
+            <div className="mt-6 md:mt-12">
+              <h2 className="mb-4 flex items-center gap-3 text-base font-black text-white md:mb-8 md:gap-4 md:text-2xl">
+                <span className="h-0.5 w-5 bg-primary md:h-1 md:w-8"></span>
                 応募要件
               </h2>
-              <ul className="space-y-4">
+              <ul className="space-y-2 md:space-y-4">
                 {job.requirements.map((item: string, i: number) => (
-                  <li key={i} className="flex items-start gap-4 text-gray-300">
-                    <span className="material-symbols-outlined text-primary text-xl mt-1">verified</span>
-                    <span className="text-lg">{item}</span>
+                  <li key={i} className="flex items-start gap-2 text-gray-300 md:gap-4">
+                    <span className="material-symbols-outlined mt-0.5 text-base text-primary md:mt-1 md:text-xl">verified</span>
+                    <span className="text-xs leading-relaxed md:text-lg">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
           </div>
 
-          <div className="mt-20 pt-16 border-t border-white/10 flex flex-col items-center">
-            <Link to="/contact" className="w-full md:w-auto px-20 py-5 bg-white hover:bg-primary text-black font-black transition-all transform hover:scale-105 text-center tracking-widest uppercase">
+          <div className="mt-8 flex flex-col items-center border-t border-white/10 pt-6 md:mt-20 md:pt-16">
+            <Link to="/contact" className="w-full transform bg-white px-8 py-3 text-center text-[11px] font-black uppercase tracking-widest text-black transition-all hover:scale-105 hover:bg-primary md:w-auto md:px-20 md:py-5 md:text-base">
               この職種に応募する
             </Link>
           </div>
