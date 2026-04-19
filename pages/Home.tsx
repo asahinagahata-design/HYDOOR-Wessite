@@ -8,7 +8,7 @@ const Home: React.FC = () => {
   return (
     <div className="w-full bg-black">
       {/* Dynamic Hero Section */}
-      <section className="relative h-screen flex items-end justify-center overflow-hidden pb-20 md:items-end md:pb-12">
+      <section className="relative h-screen flex items-end justify-center overflow-hidden pb-20 md:items-end md:pb-6">
         <div className="absolute inset-0 z-0">
           <video
             className="w-full h-full object-cover opacity-60 contrast-110 scale-100"
@@ -39,7 +39,7 @@ const Home: React.FC = () => {
               Forging the Future of Performance
             </h2>
           </div>
-          <h1 className="mb-6 flex flex-col items-center font-display leading-[0.82] tracking-tighter text-white text-[clamp(7rem,27vw,11rem)] md:mb-4 md:text-[7rem] lg:text-[10rem] xl:text-[12rem]">
+          <h1 className="mb-6 flex flex-col items-center font-display leading-[0.82] tracking-tighter text-white text-[clamp(7rem,27vw,11rem)] md:mb-4 md:text-[5.5rem] lg:text-[8rem] xl:text-[10rem]">
             <span className="block animate-in slide-in-from-right duration-1000 delay-200">BEYOND THE</span>
             <span className="block text-primary text-glow animate-in slide-in-from-left duration-1000 delay-500">SURFACE</span>
           </h1>
