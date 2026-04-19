@@ -1,11 +1,12 @@
 
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,12 +17,31 @@ const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Artistry', path: '/event' },
-    { name: 'Technology', path: '/sports' },
-    { name: 'VEO LAB', path: '/animate' },
-    { name: 'Careers', path: '/recruit' },
+    { name: 'ホーム', path: '/', anchor: '' },
+    { name: '事業内容', path: '/', anchor: 'services' },
+    { name: '採用情報', path: '/recruit', anchor: '' },
   ];
+
+  const handleNavClick = (link: typeof navLinks[0]) => {
+    setMobileMenuOpen(false);
+    if (link.anchor) {
+      if (location.pathname === '/') {
+        document.getElementById(link.anchor)?.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        navigate('/');
+        setTimeout(() => {
+          document.getElementById(link.anchor)?.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    } else {
+      navigate(link.path);
+    }
+  };
+
+  const isActive = (link: typeof navLinks[0]) => {
+    if (link.anchor) return false;
+    return location.pathname === link.path;
+  };
 
   return (
     <header 
@@ -32,26 +52,26 @@ const Navbar: React.FC = () => {
       <div className="max-w-[1600px] mx-auto px-8 md:px-12 flex items-center justify-between">
         <Link to="/" className="flex flex-col group">
           <h1 className="text-white text-4xl font-display tracking-wider leading-none group-hover:text-primary transition-colors">HYDOOR</h1>
-          <span className="text-[8px] text-gray-500 font-bold tracking-[0.6em] uppercase mt-1">For Exceptional Athletes</span>
+          <span className="text-[8px] text-gray-500 font-bold tracking-[0.6em] uppercase mt-1">For All Athletes</span>
         </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-14">
           {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
+            <button
+              key={link.name}
+              onClick={() => handleNavClick(link)}
               className={`text-[10px] font-black tracking-[0.3em] transition-all duration-300 uppercase relative group ${
-                location.pathname === link.path ? 'text-primary' : 'text-gray-400 hover:text-white'
+                isActive(link) ? 'text-primary' : 'text-gray-400 hover:text-white'
               }`}
             >
               {link.name}
-              <span className={`absolute -bottom-2 left-0 w-0 h-[1px] bg-primary transition-all duration-500 group-hover:w-full ${location.pathname === link.path ? 'w-full' : ''}`}></span>
-            </Link>
+              <span className={`absolute -bottom-2 left-0 w-0 h-[1px] bg-primary transition-all duration-500 group-hover:w-full ${isActive(link) ? 'w-full' : ''}`}></span>
+            </button>
           ))}
           <Link to="/contact">
             <button className="bg-white hover:bg-primary text-black text-[10px] font-black tracking-[0.2em] px-10 py-4 transition-all transform hover:scale-105 rounded-sm">
-              GET IN TOUCH
+              お問い合わせ
             </button>
           </Link>
         </nav>
@@ -69,29 +89,40 @@ const Navbar: React.FC = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu — コンパクトなドロップダウン（全画面オーバーレイではない） */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-[90] bg-black flex flex-col items-start justify-center px-12 gap-12 animate-in fade-in slide-in-from-right duration-500">
-          <div className="space-y-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                onClick={() => setMobileMenuOpen(false)}
-                className="block text-6xl font-display text-white hover:text-primary tracking-tight transition-colors"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-          <Link 
-            to="/contact" 
+        <>
+          <button
+            type="button"
+            aria-label="メニューを閉じる"
+            className="fixed inset-0 z-[90] bg-black/50 backdrop-blur-sm lg:hidden"
             onClick={() => setMobileMenuOpen(false)}
-            className="text-primary font-black tracking-widest text-lg border-b-2 border-primary pb-2"
-          >
-            CONTACT US
-          </Link>
-        </div>
+          />
+          <div className="fixed right-4 top-[4.5rem] z-[95] w-[min(calc(100vw-2rem),17rem)] animate-in fade-in zoom-in-95 duration-200 lg:hidden">
+            <div className="rounded-lg border border-white/15 bg-neutral-950/95 py-3 shadow-2xl backdrop-blur-xl">
+              <nav className="flex flex-col">
+                {navLinks.map((link) => (
+                  <button
+                    key={link.name}
+                    type="button"
+                    onClick={() => handleNavClick(link)}
+                    className="px-5 py-3 text-left text-[11px] font-black tracking-[0.25em] text-white transition-colors hover:bg-white/10 hover:text-primary"
+                  >
+                    {link.name}
+                  </button>
+                ))}
+              </nav>
+              <div className="mx-3 border-t border-white/10" />
+              <Link
+                to="/contact"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block px-5 py-3 text-[11px] font-black tracking-[0.2em] text-primary transition-colors hover:bg-primary/10"
+              >
+                お問い合わせ
+              </Link>
+            </div>
+          </div>
+        </>
       )}
     </header>
   );

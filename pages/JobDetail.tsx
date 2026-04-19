@@ -39,6 +39,24 @@ const jobData: Record<string, any> = {
       'Web標準およびアクセシビリティへの理解'
     ]
   },
+  'facility-engineer': {
+    title: '施工管理・設備エンジニア',
+    dept: 'ENGINEERING',
+    type: '正社員',
+    desc: 'スポーツ施設の設備設計から施工管理まで。プール・トレーニング施設の専門知識を活かせます。',
+    responsibilities: [
+      'スポーツ施設の設備設計・施工管理',
+      'プール関連設備の導入計画策定',
+      '協力会社との工程管理・品質管理',
+      '施設メンテナンス計画の立案・実施'
+    ],
+    requirements: [
+      '施工管理の実務経験 2年以上',
+      '建築・設備関連の資格保有者歓迎',
+      'スポーツ施設への関心',
+      'チームワークを大切にできる方'
+    ]
+  },
   'uiux-designer': {
     title: 'UI/UX Designer',
     dept: 'DESIGN',
@@ -64,10 +82,10 @@ const JobDetail: React.FC = () => {
   const navigate = useNavigate();
   const job = jobId ? jobData[jobId] : null;
 
-  if (!job) return <div className="py-40 text-center">Job not found</div>;
+  if (!job) return <div className="py-40 text-center text-white bg-black min-h-screen">Job not found</div>;
 
   return (
-    <div className="bg-background-subtle py-24 min-h-screen">
+    <div className="bg-black py-24 min-h-screen pt-40">
       <div className="max-w-4xl mx-auto px-6">
         <button 
           onClick={() => navigate('/recruit')}
@@ -77,26 +95,26 @@ const JobDetail: React.FC = () => {
           BACK TO POSITIONS
         </button>
 
-        <div className="bg-white rounded-[3rem] p-10 md:p-16 shadow-2xl border border-gray-100">
+        <div className="bg-neutral-900 p-10 md:p-16 border border-white/10">
           <div className="flex items-center gap-4 mb-8">
-            <span className="px-4 py-1 bg-black text-white text-[10px] font-black tracking-widest uppercase rounded-full">{job.dept}</span>
-            <span className="text-primary text-xs font-black tracking-widest uppercase">{job.type}</span>
+            <span className="px-4 py-1 bg-primary text-black text-[10px] font-black tracking-widest uppercase">{job.dept}</span>
+            <span className="text-gray-400 text-xs font-black tracking-widest uppercase">{job.type}</span>
           </div>
           
-          <h1 className="text-4xl md:text-5xl font-black mb-10 tracking-tight">{job.title}</h1>
-          <p className="text-gray-600 text-xl leading-loose mb-16 pb-16 border-b border-gray-100">
+          <h1 className="text-white text-4xl md:text-5xl font-black mb-10 tracking-tight">{job.title}</h1>
+          <p className="text-gray-300 text-xl leading-loose mb-16 pb-16 border-b border-white/10">
             {job.desc}
           </p>
 
           <div className="grid md:grid-cols-1 gap-12">
             <div>
-              <h2 className="text-2xl font-black mb-8 flex items-center gap-4">
+              <h2 className="text-white text-2xl font-black mb-8 flex items-center gap-4">
                 <span className="w-8 h-1 bg-primary"></span>
                 主な業務内容
               </h2>
               <ul className="space-y-4">
                 {job.responsibilities.map((item: string, i: number) => (
-                  <li key={i} className="flex items-start gap-4 text-gray-600">
+                  <li key={i} className="flex items-start gap-4 text-gray-300">
                     <span className="material-symbols-outlined text-primary text-xl mt-1">check_circle</span>
                     <span className="text-lg">{item}</span>
                   </li>
@@ -105,13 +123,13 @@ const JobDetail: React.FC = () => {
             </div>
 
             <div className="mt-12">
-              <h2 className="text-2xl font-black mb-8 flex items-center gap-4">
+              <h2 className="text-white text-2xl font-black mb-8 flex items-center gap-4">
                 <span className="w-8 h-1 bg-primary"></span>
                 応募要件
               </h2>
               <ul className="space-y-4">
                 {job.requirements.map((item: string, i: number) => (
-                  <li key={i} className="flex items-start gap-4 text-gray-600">
+                  <li key={i} className="flex items-start gap-4 text-gray-300">
                     <span className="material-symbols-outlined text-primary text-xl mt-1">verified</span>
                     <span className="text-lg">{item}</span>
                   </li>
@@ -120,8 +138,8 @@ const JobDetail: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-20 pt-16 border-t border-gray-100 flex flex-col items-center">
-            <Link to="/contact" className="w-full md:w-auto px-20 py-5 bg-black hover:bg-neutral-800 text-white font-black rounded-2xl shadow-xl transition-all transform hover:scale-105 text-center tracking-widest uppercase">
+          <div className="mt-20 pt-16 border-t border-white/10 flex flex-col items-center">
+            <Link to="/contact" className="w-full md:w-auto px-20 py-5 bg-white hover:bg-primary text-black font-black transition-all transform hover:scale-105 text-center tracking-widest uppercase">
               この職種に応募する
             </Link>
           </div>

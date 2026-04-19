@@ -2,57 +2,75 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+const services = [
+  { to: '/sports', label: 'PERFORMANCE GEAR' },
+  { to: '/product-design', label: 'PRODUCT DESIGN' },
+  { to: '/event', label: 'AQUA MAGIC' },
+  { to: '/rental', label: 'RENTAL SERVICE' },
+  { to: '/equipment', label: 'EQUIPMENT & WORKS' },
+  { to: '/ai-system', label: 'AI & SYSTEM' },
+];
+
+const company = [
+  { to: '/recruit', label: '採用情報' },
+  { to: '/contact', label: 'お問い合わせ' },
+];
+
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-black text-white py-24 border-t border-white/10 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-20 mb-24">
-          <div className="col-span-1 md:col-span-1 flex flex-col items-center md:items-start text-center md:text-left">
-            <Link to="/" className="group mb-10">
-              <h2 className="text-3xl font-black tracking-tighter italic uppercase">HYDOOR <span className="text-primary not-italic">INC.</span></h2>
+    <footer className="border-t border-white/10 bg-black py-10 text-white md:py-12">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between md:gap-12">
+          {/* Brand */}
+          <div className="flex flex-col items-center text-center md:items-start md:text-left">
+            <Link to="/" className="mb-2">
+              <h2 className="whitespace-nowrap text-xl font-black uppercase italic tracking-tighter">
+                HYDOOR&nbsp;<span className="not-italic text-primary">Co.,&nbsp;Ltd.</span>
+              </h2>
             </Link>
-            <p className="text-gray-500 text-sm leading-loose max-w-xs font-bold uppercase tracking-widest">
-              Crafting Innovation <br />Opening Possibilities
+            <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-gray-500">
+              Crafting Innovation / Opening Possibilities
             </p>
           </div>
-          
-          <div className="text-center md:text-left">
-            <h4 className="font-black text-[10px] uppercase tracking-[0.5em] text-primary mb-10 opacity-60">Services</h4>
-            <ul className="space-y-6 text-sm font-black tracking-widest">
-              <li><Link to="/event" className="hover:text-primary transition-colors">EVENT ART</Link></li>
-              <li><Link to="/sports" className="hover:text-primary transition-colors">OEM SOLUTION</Link></li>
-              <li><Link to="/" className="hover:text-primary transition-colors">BRANDING</Link></li>
-            </ul>
-          </div>
 
-          <div className="text-center md:text-left">
-            <h4 className="font-black text-[10px] uppercase tracking-[0.5em] text-primary mb-10 opacity-60">Company</h4>
-            <ul className="space-y-6 text-sm font-black tracking-widest">
-              <li><Link to="/recruit" className="hover:text-primary transition-colors">CAREERS</Link></li>
-              <li><Link to="/contact" className="hover:text-primary transition-colors">SUPPORT</Link></li>
-              <li><Link to="/" className="hover:text-primary transition-colors">PRIVACY</Link></li>
-            </ul>
-          </div>
+          {/* Links */}
+          <div className="flex flex-col gap-6 sm:flex-row sm:gap-12 md:gap-16">
+            <div className="text-center md:text-left">
+              <h4 className="mb-3 text-[9px] font-black uppercase tracking-[0.4em] text-primary opacity-70">
+                Services
+              </h4>
+              <ul className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-[11px] font-black tracking-widest md:flex-col md:gap-2">
+                {services.map((item) => (
+                  <li key={item.to}>
+                    <Link to={item.to} className="transition-colors hover:text-primary">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          <div className="text-center md:text-left">
-            <h4 className="font-black text-[10px] uppercase tracking-[0.5em] text-primary mb-10 opacity-60">Headquarters</h4>
-            <div className="space-y-8 text-sm font-bold text-gray-400">
-              <p className="leading-relaxed">〒577-0066 大阪府 東大阪市<br/>高井田本通 7-6-15</p>
-              <div className="pt-6 border-t border-white/10">
-                <p className="text-white text-lg font-black tracking-tighter">06-6789-6676</p>
-                <p className="text-xs text-gray-500 mt-2 italic font-black break-all">shopmaster@speedojpn.com</p>
-              </div>
+            <div className="text-center md:text-left">
+              <h4 className="mb-3 text-[9px] font-black uppercase tracking-[0.4em] text-primary opacity-70">
+                Company
+              </h4>
+              <ul className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-[11px] font-black tracking-widest md:flex-col md:gap-2">
+                {company.map((item) => (
+                  <li key={item.to}>
+                    <Link to={item.to} className="transition-colors hover:text-primary">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
 
-        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-10 opacity-40">
-          <p className="text-[9px] font-black tracking-[0.5em] uppercase italic">© 2024 HYDOOR INC. ALL RIGHTS RESERVED.</p>
-          <div className="flex gap-10">
-            {['facebook', 'instagram', 'youtube'].map(s => (
-              <span key={s} className="material-symbols-outlined text-xl hover:text-primary cursor-pointer transition-colors">public</span>
-            ))}
-          </div>
+        <div className="mt-8 flex justify-center border-t border-white/5 pt-5 opacity-40 md:mt-10 md:justify-start md:pt-6">
+          <p className="whitespace-nowrap text-[8px] font-black uppercase italic tracking-[0.35em] sm:text-[9px] sm:tracking-[0.5em]">
+            © 2025 HYDOOR Co., Ltd. ALL RIGHTS RESERVED.
+          </p>
         </div>
       </div>
     </footer>
