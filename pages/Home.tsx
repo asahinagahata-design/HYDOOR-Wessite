@@ -85,7 +85,7 @@ const Home: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-3 gap-0.5 md:gap-1">
+          <div className="grid grid-cols-2 gap-1 md:grid-cols-3">
             {[
               {
                 id: '01',
@@ -139,19 +139,19 @@ const Home: React.FC = () => {
               <Link
                 key={item.id}
                 to={item.link}
-                className="group relative block aspect-[3/4] min-w-0 overflow-hidden border border-white/5 bg-neutral-900"
+                className="group relative block aspect-[4/5] min-w-0 overflow-hidden border border-white/5 bg-neutral-900 md:aspect-[3/4]"
               >
                 <img
                   src={item.img}
                   className="absolute inset-0 h-full w-full scale-100 object-cover opacity-70 transition-all duration-1000 group-hover:scale-110 group-hover:opacity-100"
                   alt={item.title}
                 />
-                <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black via-black/30 to-transparent p-2 sm:p-4 md:p-5 lg:p-8">
-                  <span className="mb-0.5 font-display text-[10px] text-primary drop-shadow-lg sm:text-base md:text-lg lg:text-2xl">{item.id}</span>
-                  <p className="mb-0.5 hidden text-[8px] font-black tracking-[0.25em] text-primary drop-shadow-md sm:block md:text-[9px] md:tracking-[0.3em] lg:text-xs lg:tracking-[0.4em]">
+                <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black via-black/30 to-transparent p-4 sm:p-5 md:p-5 lg:p-8">
+                  <span className="mb-1 font-display text-base text-primary drop-shadow-lg md:text-lg lg:text-2xl">{item.id}</span>
+                  <p className="mb-1 text-[9px] font-black tracking-[0.25em] text-primary drop-shadow-md md:text-[9px] md:tracking-[0.3em] lg:text-xs lg:tracking-[0.4em]">
                     {item.label}
                   </p>
-                  <h3 className="font-display text-[10px] leading-tight tracking-tight text-white drop-shadow-2xl sm:text-base md:text-xl lg:text-3xl xl:text-4xl">
+                  <h3 className="font-display text-base leading-tight tracking-tight text-white drop-shadow-2xl sm:text-lg md:text-xl lg:text-3xl xl:text-4xl">
                     {item.title}
                   </h3>
                   <div className="hidden max-h-0 overflow-hidden transition-all duration-700 group-hover:max-h-40 md:block">
