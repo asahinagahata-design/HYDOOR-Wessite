@@ -8,7 +8,7 @@ const Home: React.FC = () => {
   return (
     <div className="w-full bg-black">
       {/* Dynamic Hero Section */}
-      <section className="relative h-screen flex items-end justify-center overflow-hidden pb-20 md:items-end md:pb-12 md:pt-32">
+      <section className="relative h-screen flex items-end justify-center overflow-hidden pb-20 md:items-end md:pb-12">
         <div className="absolute inset-0 z-0">
           <video
             className="w-full h-full object-cover opacity-60 contrast-110 scale-100"
@@ -44,7 +44,7 @@ const Home: React.FC = () => {
             <span className="block text-primary text-glow animate-in slide-in-from-left duration-1000 delay-500">SURFACE</span>
           </h1>
 
-          <div className="max-w-xl mx-auto mb-6 opacity-0 animate-in fade-in duration-1000 delay-1000 fill-mode-forwards md:mb-6">
+          <div className="max-w-xl mx-auto mb-6 opacity-0 animate-in fade-in duration-1000 delay-1000 fill-mode-forwards md:hidden">
             <p className="text-gray-200 text-xs md:text-sm font-medium tracking-widest leading-relaxed drop-shadow-xl">
               限界を超え、新たな高みへ。アスリートの情熱と最先端テクノロジーが交差する。
               HYDOORは、水面下で磨かれた真のパフォーマンスを、世界へ解き放つ。
